@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: '03_flash_config' 
- * Target:  '02_spi_config' 
+ * Project: '04_bootloader_config' 
+ * Target:  '04_bootloader_config' 
  */
 
 #ifndef RTE_COMPONENTS_H
