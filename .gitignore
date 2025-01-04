@@ -1,0 +1,8 @@
+/DebugConfig
+*.uvguix.*
+GD32F4xx_Firmware_Library_V3.2.0
+/usart_config
+/02_spi_config
+/03_flash_config
+
+.vscode

@@ -1,0 +1,195 @@
+Dependencies for Project 'ota_init', Target 'OTA': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (..\CMSIS\Source\system_gd32f4xx.c)(0x67755723)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/system_gd32f4xx.o -MD)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\CMSIS\Source\startup_gd32f407_427.s)(0x65A4D76E)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"GD32F407 SETA 1"-o ../obj/startup_gd32f407_427.o)
+F (..\Firmware\Source\gd32f4xx_gpio.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_gpio.o -MD)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\Firmware\Source\gd32f4xx_misc.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_misc.o -MD)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\Firmware\Source\gd32f4xx_pmu.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_pmu.o -MD)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\Firmware\Source\gd32f4xx_rcu.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_rcu.o -MD)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\Firmware\Source\gd32f4xx_usart.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_usart.o -MD)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+F (..\Firmware\Source\gd32f4xx_dma.c)(0x65A4D76D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_dma.o -MD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\User\main.c)(0x677695E2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/main.o -MD)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+I (..\Lib\usart\usart.h)(0x6776873C)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdio.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\string.h)(0x63884908)
+I (..\User\delay.h)(0x677695C4)
+F (..\User\gd32f4xx_it.c)(0x677695C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/gd32f4xx_it.o -MD)
+I (..\User\gd32f4xx_it.h)(0x65A4D76D)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+I (..\User\systick.h)(0x65A4D76D)
+I (..\Lib\usart\usart.h)(0x6776873C)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdio.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\string.h)(0x63884908)
+F (..\User\delay.c)(0x6776950D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/delay.o -MD)
+I (..\User\delay.h)(0x677695C4)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+F (..\Lib\usart\usart.c)(0x67768A48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../CMSIS/Include -I ../Firmware/Include -I ../User -I ../Lib/usart -Wno-invalid-source-encoding-ID:/Keil_c51/ARM/Packs/GigaDevice/GD32F4xx_DFP/3.2.0/Device/F4XX/Include-D__UVISION_VERSION="538" -DGD32F407-o ../obj/usart.o -MD)
+I (..\Lib\usart\usart.h)(0x6776873C)
+I (..\CMSIS\Include\gd32f4xx.h)(0x67755723)
+I (..\CMSIS\Include\core_cm4.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (..\CMSIS\Include\core_cmInstr.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cmFunc.h)(0x65A4D76E)
+I (..\CMSIS\Include\core_cm4_simd.h)(0x65A4D76E)
+I (..\CMSIS\Include\system_gd32f4xx.h)(0x65A4D76E)
+I (D:\Keil_c51\ARM\Packs\GigaDevice\GD32F4xx_DFP\3.2.0\Device\F4XX\Include\gd32f4xx_libopt.h)(0x65AF2BEE)
+I (..\User\RTE_Components.h)(0x677630AD)
+I (..\Firmware\Include\gd32f4xx_dma.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_gpio.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_misc.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_pmu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_rcu.h)(0x65A4D76D)
+I (..\Firmware\Include\gd32f4xx_usart.h)(0x65A4D76D)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\stdio.h)(0x63884908)
+I (D:\Keil_c51\ARM\ARMCLANG\include\string.h)(0x63884908)

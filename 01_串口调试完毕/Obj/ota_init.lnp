@@ -1,0 +1,16 @@
+--cpu=Cortex-M4.fp.sp
+"..\obj\system_gd32f4xx.o"
+"..\obj\startup_gd32f407_427.o"
+"..\obj\gd32f4xx_gpio.o"
+"..\obj\gd32f4xx_misc.o"
+"..\obj\gd32f4xx_pmu.o"
+"..\obj\gd32f4xx_rcu.o"
+"..\obj\gd32f4xx_usart.o"
+"..\obj\gd32f4xx_dma.o"
+"..\obj\main.o"
+"..\obj\gd32f4xx_it.o"
+"..\obj\usart.o"
+--library_type=microlib --strict --scatter "..\Obj\ota_init.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ota_init.map" -o ..\Obj\ota_init.axf
