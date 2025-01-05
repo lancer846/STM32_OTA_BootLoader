@@ -35,6 +35,16 @@ extern "C" {
 #include "w25q128.h"
 #include "bsp_internal_flash.h"
 #include "boot.h"
+
+/* flash 及 B 区、A 区分区 */
+#define STM32_FLASH_BASE 			0x08000000  // flash 起始地址
+#define STM32_SECTOR_SIZE 		(1024 * 16) // 扇区大小
+#define STM32_B_SECTOR_NUM    2           // B 区扇区数量
+// A 区起始地址
+#define STM32_A_START_ADDRESS (STM32_FLASH_BASE + STM32_SECTOR_SIZE * STM32_B_SECTOR_NUM)
+
+
+/* 串口 */
 // 字节接收缓冲区大小
 #define POINTER_ARR_SIZE 		2048
 #define POINTER_ARR_TX_SIZE 2048

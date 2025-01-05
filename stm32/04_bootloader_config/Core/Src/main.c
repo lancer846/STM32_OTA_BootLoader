@@ -110,63 +110,31 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	// 缓存区数组定义
-  // unsigned char buff[20] = {0};
-  // W25Q128_erase_sector(0);
-  // HAL_Delay(200);
-  // W25Q128_read(buff, 0, 10);
-  // // 输出读取到的数据
-  // printf("读取到的数据= %s\r\n", buff);
-  // HAL_Delay(200);
-
-  // // 获取W25Q128的设备ID
-  // printf("\r\n【2】读取设备的id......\r\n");
-  // printf("设备ID = %X\r\n", W25Q128_readID());
-  // HAL_Delay(200);
-  // W25Q128_write((uint8_t *)"qwer", 0, 5);
-  // HAL_Delay(200);
-  // W25Q128_read(buff, 0, 5);
-  // printf("read data = %s\r\n", buff);
-  // HAL_Delay(200);
-
-
-  // printf("==================================\r\n");
-  // printf("正在进行读写内部FLASH实验，请耐心等待\r\n");
-
-  // //  if (InternalFlash_Test()==0) {
-  // //        printf("读写内部FLASH测试成功\r\n");
-  // //  } else {
-  // //        printf("读写内部FLASH测试失败\r\n");
-  // //  }
-  // uint32_t data = 0x12345678;
-  // internal_flash_erase(FLASH_SECTOR_7, 1);
-  // internal_flash_write(ADDR_FLASH_SECTOR_7, &data, 4);
-  // printf("read data = %#x\n", *(uint32_t *)ADDR_FLASH_SECTOR_7);
 	
-	HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buff, SINGLE_DATA_MAX);
+	// HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buff, SINGLE_DATA_MAX);
   while (1)
   {
 		// 处理传输过来的数据
-    if (qp.pos_ptr_out != qp.pos_ptr_in)
-    {
-      // out 与 in 的指针不相等，表示队列中有存入新的数据
-			// 按照队列的每个元素的 start与end 为界限来进行处理
-			// 1、获取该分区内元素的个数
-      uint16_t byte_count = qp.pos_ptr_out->end - qp.pos_ptr_out->start + 1;
-      printf("the part has %d element\n", byte_count);
+    // if (qp.pos_ptr_out != qp.pos_ptr_in)
+    // {
+    //   // out 与 in 的指针不相等，表示队列中有存入新的数据
+		// 	// 按照队列的每个元素的 start与end 为界限来进行处理
+		// 	// 1、获取该分区内元素的个数
+    //   uint16_t byte_count = qp.pos_ptr_out->end - qp.pos_ptr_out->start + 1;
+    //   printf("the part has %d element\n", byte_count);
 
-      for (uint16_t i = 0; i < byte_count; i++)
-      {
-        printf("%c", qp.pos_ptr_out->start[i]);
-      }
-      printf("\n");
-      qp.pos_ptr_out++;
-      // 指针列表已达到末尾，返回首位
-      if (qp.pos_ptr_out == qp.pos_ptr_end)
-      {
-        qp.pos_ptr_out = &qp.pos_ptr[0];
-      }
-    }
+    //   for (uint16_t i = 0; i < byte_count; i++)
+    //   {
+    //     printf("%c", qp.pos_ptr_out->start[i]);
+    //   }
+    //   printf("\n");
+    //   qp.pos_ptr_out++;
+    //   // 指针列表已达到末尾，返回首位
+    //   if (qp.pos_ptr_out == qp.pos_ptr_end)
+    //   {
+    //     qp.pos_ptr_out = &qp.pos_ptr[0];
+    //   }
+    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
