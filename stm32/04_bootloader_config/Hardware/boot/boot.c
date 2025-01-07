@@ -1,13 +1,13 @@
 #include "boot.h"
 
 pFunction reset_handler;
-#define TEST 0
+#define TEST 1
 // bootloader 初始化
 void boot_init(void)
 {
 #if TEST
-    uint32_t temp = 0xAABB1122;
-    W25Q128_write((uint8_t *)&temp, W25Q128_LAST_BLOCK_ADDRESS, 4);
+    st_ota_info.ota_flag = 0xAABB1122;
+    W25Q128_write_vatiable_into_flash();
     HAL_Delay(200);
 #endif
     // 将 OTA 结构体数据清零
@@ -19,6 +19,10 @@ void boot_init(void)
     {
         // 需要更新
         printf("need update\n");
+        // 改变全局状态
+        boot_update_status |= OTA_UPDATE_A_FLAG;
+        // 赋值为标志 OTA 升级区域对应的序号
+        st_ota_update_package.update_package_arrive_num = 0;
     }
     else
     {

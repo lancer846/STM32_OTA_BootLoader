@@ -50,6 +50,10 @@ uint8_t rx_buff[POINTER_ARR_SIZE];
 QUEUE_POS_t qp;
 
 OTA_Info_t st_ota_info; // OTA 结构体数据
+OTA_UpdatePackage_t st_ota_update_package; // OTA 更新的分包的信息
+
+// 全局状态变量，共 32 位，每一位均用于判断当前哪种事件触发
+uint32_t boot_update_status;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,31 +114,48 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	
-	// HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_buff, SINGLE_DATA_MAX);
+  uint16_t i;
   while (1)
   {
-		// 处理传输过来的数据
-    // if (qp.pos_ptr_out != qp.pos_ptr_in)
-    // {
-    //   // out 与 in 的指针不相等，表示队列中有存入新的数据
-		// 	// 按照队列的每个元素的 start与end 为界限来进行处理
-		// 	// 1、获取该分区内元素的个数
-    //   uint16_t byte_count = qp.pos_ptr_out->end - qp.pos_ptr_out->start + 1;
-    //   printf("the part has %d element\n", byte_count);
+    // OTA 标志升级标志位为 1
+		if(boot_update_status & OTA_UPDATE_A_FLAG) {
+      // 开始着手更新 A 区
+      printf("download total size = %d\n", st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num]);
+      // 在写入时，是按照 4 个字节为单位进行处理的，所以升级的包大小必须是 4 的整数倍
+      if(st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num] % 4 == 0) {
+        // 先进行内部 flash 擦除，此处擦除 sector2~3，共 32Kbytes
+        internal_flash_erase(FLASH_SECTOR_2, 2);
+        // 每次读取 1024 字节，计算总共需要读取多少次
+        int read_count = st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num] / OTA_SUBCONTRACT_DOWNLOAD_SIZE;
+        for (i = 0; i < read_count; i++)
+        {
+          // 读取，升级包及每个单独的应用程序分配 64Kbytes
+          W25Q128_read(st_ota_update_package.update_single_package, st_ota_update_package.update_package_arrive_num * 64 * 1024 + i * OTA_SUBCONTRACT_DOWNLOAD_SIZE, OTA_SUBCONTRACT_DOWNLOAD_SIZE);
+          // 写入内部 flash
+          internal_flash_write(STM32_A_START_ADDRESS + i * OTA_SUBCONTRACT_DOWNLOAD_SIZE, (uint32_t *)st_ota_update_package.update_single_package, OTA_SUBCONTRACT_DOWNLOAD_SIZE);
+        }
+        // 如果上面的大小整除不尽，就会还有剩下的等待处理
+        uint32_t remain = st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num] % OTA_SUBCONTRACT_DOWNLOAD_SIZE;
+        if(remain != 0) {
+          // 读取
+          W25Q128_read(st_ota_update_package.update_single_package, st_ota_update_package.update_package_arrive_num * 64 * 1024 + i * OTA_SUBCONTRACT_DOWNLOAD_SIZE, remain);
+          // 写入内部 flash
+          internal_flash_write(STM32_A_START_ADDRESS + i * OTA_SUBCONTRACT_DOWNLOAD_SIZE, (uint32_t *)st_ota_update_package.update_single_package, remain);
+        }
+        
+        // 写完数据，清除标志位，并且重启
+        if(st_ota_update_package.update_single_package == 0) {
+          st_ota_info.ota_flag = 0;
+          // 将标志位写入内存中
+          W25Q128_write_vatiable_into_flash();
+        }
+        NVIC_SystemReset();
 
-    //   for (uint16_t i = 0; i < byte_count; i++)
-    //   {
-    //     printf("%c", qp.pos_ptr_out->start[i]);
-    //   }
-    //   printf("\n");
-    //   qp.pos_ptr_out++;
-    //   // 指针列表已达到末尾，返回首位
-    //   if (qp.pos_ptr_out == qp.pos_ptr_end)
-    //   {
-    //     qp.pos_ptr_out = &qp.pos_ptr[0];
-    //   }
-    // }
+      } else {
+        printf("长度有误\n");
+          boot_update_status &= ~OTA_UPDATE_A_FLAG;
+      }
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

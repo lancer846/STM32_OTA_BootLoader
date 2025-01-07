@@ -222,7 +222,7 @@ void internal_flash_write(uint32_t addr, uint32_t *buf, uint32_t len) {
     for (i = 0; i < len; i += 4) {
         HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, addr, *buf);
         addr += 4;
-        buf += 4;
+        buf += 1;
     }
 
     /* 给FLASH上锁，防止内容被篡改*/

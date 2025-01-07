@@ -135,6 +135,35 @@ void W25Q128_erase_sector(uint32_t addr)
 W25Q128将16M的容量分为256个块（Block),每个块大小为64K（64000）个字节，每个块又分为16个扇区（Sector),每个扇区4K个字节。
 W25Q128的最小擦除单位为一个扇区，也就是每次必须擦除4K个字节。
 **********************************************************/
+void W25Q128_erase_block_32k(uint32_t addr)
+{
+    // 计算扇区号，一个扇区4KB=4096
+    addr *= 32 * 1024;
+    uint8_t addr_origin = 0x52;
+    uint8_t addr_high = (uint8_t)((addr) >> 16);
+    uint8_t addr_mid = (uint8_t)((addr) >> 8);
+    uint8_t addr_low = (uint8_t)addr;
+    W25Q128_write_enable(); // 写使能
+    W25Q128_wait_busy();    // 判断忙，如果忙则一直等待
+    // 拉低CS端为低电平
+    W25Q128_CS_LOW();
+    // 发送指令D8h
+    HAL_SPI_Transmit(&hspi1, &addr_origin, 1, 1000);
+    // spi_read_write_byte(0x20);
+    // 发送24位扇区地址的高8位
+    HAL_SPI_Transmit(&hspi1, &addr_high, 1, 1000);
+    // spi_read_write_byte((uint8_t)((addr)>>16));
+    // 发送24位扇区地址的中8位
+    HAL_SPI_Transmit(&hspi1, &addr_mid, 1, 1000);
+    // spi_read_write_byte((uint8_t)((addr)>>8));
+    // 发送24位扇区地址的低8位
+    HAL_SPI_Transmit(&hspi1, &addr_low, 1, 1000);
+    // spi_read_write_byte((uint8_t)addr);
+    // 恢复CS端为高电平
+    W25Q128_CS_HIGH();
+    // 等待擦除完成
+    W25Q128_wait_busy();
+}
 void W25Q128_erase_block_64k(uint32_t addr)
 {
     // 计算扇区号，一个扇区4KB=4096
@@ -252,4 +281,13 @@ void W25Q128_read(uint8_t *buffer, uint32_t read_addr, uint16_t read_length)
     }
     // 恢复CS端为高电平
     W25Q128_CS_HIGH();
+}
+
+
+/**
+ * @brief 向 W25Q128 中写入 OTA 标志位变量
+ * 
+ */
+void W25Q128_write_vatiable_into_flash() {
+    W25Q128_write((uint8_t *)&st_ota_info, W25Q128_LAST_BLOCK_ADDRESS, OTA_INFO_SIZE);
 }
