@@ -7,6 +7,7 @@ void boot_init(void)
 {
 #if TEST
     st_ota_info.ota_flag = 0xAABB1122;
+    st_ota_info.ota_down_size[0] = 3;
     W25Q128_write_vatiable_into_flash();
     HAL_Delay(200);
 #endif

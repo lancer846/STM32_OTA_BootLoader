@@ -110,6 +110,7 @@ int main(void)
 	QUEUE_POS_init();
   w25q128_init();
   boot_init();
+  printf("boot init over\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,6 +124,7 @@ int main(void)
       printf("download total size = %d\n", st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num]);
       // 在写入时，是按照 4 个字节为单位进行处理的，所以升级的包大小必须是 4 的整数倍
       if(st_ota_info.ota_down_size[st_ota_update_package.update_package_arrive_num] % 4 == 0) {
+        // printf("size\n");
         // 先进行内部 flash 擦除，此处擦除 sector2~3，共 32Kbytes
         internal_flash_erase(FLASH_SECTOR_2, 2);
         // 每次读取 1024 字节，计算总共需要读取多少次
@@ -144,11 +146,13 @@ int main(void)
         }
         
         // 写完数据，清除标志位，并且重启
-        if(st_ota_update_package.update_single_package == 0) {
+        if(st_ota_update_package.update_package_arrive_num == 0) {
+          // printf("ota flag\n");
           st_ota_info.ota_flag = 0;
           // 将标志位写入内存中
           W25Q128_write_vatiable_into_flash();
         }
+        // printf("reset\n");
         NVIC_SystemReset();
 
       } else {
