@@ -1,5 +1,7 @@
 # STM32_OTA
 
+![image-20250112223140334](D:\develop\arm_ota\assets\image-20250112223140334.png)
+
 - 在 stm32F407 中以扇区来进行擦写，该芯片主功能区存有 8 个扇区
 - 将内部划分为 B 区和 A 区，B区在前
   - B 区存放 BootLoader，A 区存放程序功能代码
@@ -13,7 +15,7 @@
 
 - 暂定 BootLoader 大小为 32Kbytes，占据扇区 0、1（Sector 0、Sector 1）
 
-![image-20250104200114846](C:\Users\G\AppData\Roaming\Typora\typora-user-images\image-20250104200114846.png)
+![image-20250104200114846](D:\develop\arm_ota\assets\image-20250104200114846.png)
 
 ## OTA标志位
 
@@ -32,7 +34,7 @@
 
 - 3、补充，需要将在 B 区使用到的外设进行 reset 初始化，保证其在跳转 A 区时是初始状态
 
-![image-20250105224554176](C:\Users\G\AppData\Roaming\Typora\typora-user-images\image-20250105224554176.png)
+![image-20250105224554176](D:\develop\arm_ota\assets\image-20250105224554176.png)
 
 ## OTA更新细节
 
@@ -59,3 +61,14 @@
 - STM32F407VGT6 内部 flash 有 512Kbytes，按照 sectors 来进行擦除，前面 sector0~3 是16Kbytes，sector4 是 64Kbytes，sector5~7 是 128Kbytes，故一次最少擦除 16Kbytes
 
 - W25Q128 内部 flash 大小为 128Mbit，即16Mbytes，可以按照扇区 sector 或者块 block 进行擦除，sector 擦除一次为 4 Kbytes，block 擦除可以是 32Kbytes，或者 64Kbytes
+
+![image-20250112223140334](D:\develop\arm_ota\assets\image-20250112223140334.png)
+
+## 接下来实现下方的三个额外功能：
+
+- 串口 IAP 更新应用程序
+
+- 设置版本号
+
+- 更新指定应用程序到 A 区
+

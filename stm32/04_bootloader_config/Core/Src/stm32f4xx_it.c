@@ -238,7 +238,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
   // printf("size = %d\n", Size);
   // qp.receive_count += (SINGLE_DATA_MAX + 1) - dma_transfer_number_get(DMA1, DMA_CH5);
   // 将 out 指针指向本次传输的最后一个元素
-  qp.pos_ptr_in->end = &rx_buff[qp.receive_count - 1];
+  qp.pos_ptr_in->end = &(rx_buff[qp.receive_count - 1]);
   qp.pos_ptr_in++;
   
   if (qp.pos_ptr_in == qp.pos_ptr_end)
